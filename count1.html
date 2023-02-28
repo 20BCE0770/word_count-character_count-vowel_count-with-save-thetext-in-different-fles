@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Vowel count</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="bharath">
+        <button type="button" onclick="btnclicked()">Back</button>
+        <br>
+        <br>
+        <h4>Vowel Counter</h4>
+        <textarea id="textArea" onkeyup="countvowel(this.value);" placeholder="write here......"></textarea>
+        <p>
+            Vowel <span id="vowelCount">0</span>
+        </p>  
+    </div>
+    
+    <script>
+        var vowelCount =document.getElementById("vowelCount");
+        function countvowel(str){
+            str=str.toLowerCase();
+            let arr=['a','e','i','o','u'], counter=0;
+            for(let letter of str){
+                if(arr.includes(letter)){
+                    counter++;
+                } 
+                
+            }
+            vowelCount.innerHTML = counter;
+
+        }
+        function btnclicked(){
+        document.location.href="main.html";
+    }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Word count</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="bharath">
+        <h4>Word Counter</h4>
+        <textarea id="textArea"  placeholder="write here......"></textarea>
+        <p>
+            words <span id="wordCount">0</span>
+            Characters <span id="CharCount">0</span>
+        </p> 
+        <br>
+        <br>
+        <button type="button" onclick="btnclicked()">vowol count</button>
+        <button type="button" onclick="btnclicked1()">Save Text In File</button> 
+    </div>
+    
+    
+    <script>
+        let text =document.getElementById("textArea");
+        let word =document.getElementById("wordCount");
+        let char =document.getElementById("CharCount");
+
+        text.addEventListener("input",()=>{
+            char.textContent = text.value.length;
+            let txt= text.value.trim();
+            word.textContent = txt.split(/\s+/).filter((item) => item).length;
+        });
+        function btnclicked(){
+        document.location.href="count1.html";
+    }
+    function btnclicked1(){
+        document.location.href="dict.html";
+    }
+    </script>
+</body>
+
+</html>

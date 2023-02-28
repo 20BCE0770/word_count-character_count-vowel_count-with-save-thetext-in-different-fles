@@ -1,0 +1,146 @@
+*,
+*:before,
+*:after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  outline: none;
+}
+
+body {
+  height: 100vh;
+  background: linear-gradient(-135deg,
+      yellow,
+      orange);
+}
+
+.bharath {
+  width: 750px;
+  background-color: whitesmoke;
+  padding: 80px 30px;
+  position: relative;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  border-radius: 20px;
+  box-shadow: 0 15px 20px rgba(0, 0, 0, 0.15);
+  align-items: center;
+}
+
+.bharath h4 {
+  color: #555;
+  margin-bottom: 10px;
+  font-size: 2rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.bharath textarea {
+  position: relative;
+  width: 80%;
+  height: 250px;
+  resize: none;
+  border-radius: 20px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  outline: none;
+  padding: 10px;
+  font-size: 1.5rem;
+  color: #555;
+}
+
+.bharath p {
+  position: absolute;
+  right: 25px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  font-size: 2rem;
+
+}
+
+.bharath p span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  height: 80px;
+  background: #068ee9;
+  color: #fff;
+  border-radius: 50%;
+  transition: all .5s;
+}
+
+button {
+  padding: 15px 40px;
+  border: 0;
+  outline: none;
+  border-radius: 25px;
+  background-color: rgb(17, 89, 245);
+  color: #fff;
+  font-size: 13px;
+  cursor: pointer;
+  box-shadow: 0 10px 10px rgb(19, 15, 15);
+}
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.bharath1 {
+  width: 750px;
+  border-radius: 7px;
+  background: #fff;
+  padding: 30px 25px 40px;
+  align-items: center;
+}
+
+.bharath1 :where(textarea, input, select, button) {
+  width: 100%;
+  outline: none;
+  border: none;
+  font-size: 17px;
+  border-radius: 5px;
+}
+.bharath1 textarea{
+  height: 270px;
+  resize: none;
+  padding: 8px 13px;
+  border: 1px solid #ccc;
+}
+.bharath1 .file-option{
+  display: flex;
+  margin-top: 10px;
+  align-items: center;
+  justify-content: space-between;
+}
+.file-option .option{
+  width: calc(100% / 2 - 8px);
+}
+.option :where(input, .select-menu){
+  height: 50px;
+  padding: 0 15px;
+  margin-top: 6px;
+  border-radius: 5px;
+  border: 1px solid #bfbfbf;
+}
+.option .select-menu select{
+  height: 50px;
+  background: none;
+}
+.bharath1 .save-btn{
+  padding: 16px 0;
+  margin-top: 20px;
+  cursor: pointer;
+  opacity: 0.6;
+  pointer-events: none;
+}
+.bharath1 textarea:valid ~ .save-btn{
+  opacity: 1;
+  pointer-events: auto;
+}
